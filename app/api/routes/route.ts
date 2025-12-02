@@ -64,13 +64,17 @@ export async function PUT(req: Request){
        const updated = await  Students.findByIdAndUpdate(id , {
         fullname,email,age,major
        },{new:true});
-
-       return NextResponse.json(updated , {status:200})
+//comment yes
+       return NextResponse.json(updated , {status:200});
 
         
     } catch (error) {
         return NextResponse.json({err:"Internal Server Error",error},{status:500})
     }
+}
+
+export async function DELETE(){
+    
 }
 
 
