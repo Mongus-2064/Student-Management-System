@@ -5,7 +5,7 @@ import { connectdb } from '@/lib/db'
 
 
 export default function page() {
-  connectdb();
+  
   return (
    <main className='bg-gray-100 h-screen'>
     <Addstudents/> 

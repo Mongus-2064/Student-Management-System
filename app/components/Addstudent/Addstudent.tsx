@@ -1,10 +1,17 @@
 import { ImageUpscaleIcon, LucidePictureInPicture, UserPlus } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import Viewstudents from '../Viewstudents/Viewstudents'
 
 
 
 export default function Addstudents() {
+
+  const [name , setName] = useState <string  | null> (null);
+  const [age , setAge] = useState <string | null> (null);
+  const [photo , setPhoto] = useState <File | null>(null);
+  const [major , setMajor] = useState<string | null>(null);
+
+
   return (
 
     //  TOP SECTION 
@@ -33,6 +40,7 @@ export default function Addstudents() {
           <div className='flex flex-col gap-2 mt-3'>
             <label htmlFor="Fullname">Full Name</label>
             <input
+            onChange={(e)=> setName(e.target.value)}
               className='bg-gray-200 p-2 rounded-md'
               type='text' id='Fullname' placeholder='e.g Nabin Khatri' />
           </div>

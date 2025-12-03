@@ -1,4 +1,5 @@
 import { GraduationCap } from 'lucide-react'
+import Image from 'next/image'
 import React from 'react'
 
 export default function Viewstudents() {
@@ -22,6 +23,29 @@ export default function Viewstudents() {
                     <input
                         className='p-4 w-full mt-5 outline-gray-400 bg-gray-300/80 focus:outline-blue-500 '
                         type='text' placeholder='Search by name,email or major...' />
+                </section>
+
+
+            {/* STUDENTS INFORMATION */}
+
+
+                <section>
+                <div className='flex justify-between items-center  w-full bg-gray-200 p-2 shadow-2xl mt-6 rounded-md'>
+                   <div>
+                     <p>Name:Nabin Khatri</p>
+                    <p>class:12</p>
+                    <p>Major:computer science</p>
+                    <p>Age:20</p>
+                   </div>
+                   <div>
+                    <Image
+                    src="file.svg"
+                    alt='image'
+                    width={150}
+                    height={150}
+                    />
+                   </div>
+                </div>
                 </section>
 
 

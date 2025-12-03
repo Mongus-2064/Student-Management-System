@@ -64,7 +64,6 @@ export async function PUT(req: Request){
        const updated = await  Students.findByIdAndUpdate(id , {
         fullname,email,age,major
        },{new:true});
-//comment yes
        return NextResponse.json(updated , {status:200});
 
         
