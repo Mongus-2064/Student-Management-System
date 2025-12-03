@@ -72,7 +72,18 @@ export async function PUT(req: Request){
     }
 }
 
-export async function DELETE(){
+export async function DELETE(req: Request){
+
+    try {
+        await connectdb();
+        const { id } = await req.json();
+        await Students.findByIdAndDelete(id);
+        return NextResponse.json({msg:"Student data has been deleted"},{status:200});
+
+
+    } catch (error) {
+        return NextResponse.json({err:"Internal Server Error"}, {status:500});
+    }
     
 }
 
